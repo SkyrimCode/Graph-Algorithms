@@ -21,7 +21,7 @@ using namespace std;
 
 void bfs(int src, vector<pair<int,int>> adj[],vector<int> &distance)
 {
-    priority_queue<pair<int,int>> pq;  // {distance,node} pair is stored in pq
+    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;  // {distance,node} pair is stored in pq
     pq.push({0,src});
     distance[src]=0;
     while(!pq.empty())
