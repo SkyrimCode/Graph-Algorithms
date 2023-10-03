@@ -2,7 +2,8 @@
 
 We store weights as second element of pair in adjacency list. So if edge 1->2 has weight 5 adj[1] = {2,5}
 
-Logic: We perform topo sort to get the ordering of elements. Then for each node if that node is visited (marked by distance being non Infinity) then from that node we can travel to
+Logic: We perform topo sort to get the ordering of elements. Since topo sort ensures that we process the nodes in the order they should appear in 
+shortest path. Then for each node if that node is visited (marked by distance being non Infinity) then from that node we can travel to
 to its adjacent nodes and update the min distance accordingly.
 
 */
